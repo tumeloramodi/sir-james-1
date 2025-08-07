@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Measurements – Sir James Clothing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Open Sans', sans-serif; background: linear-gradient(135deg, #f9f6ff 0%, #e0e7ff 100%); color: #222; min-height: 100vh; }
+    header { background: linear-gradient(120deg, #6a11cb 0%, #2575fc 100%); color: #fff; text-align: center; padding: 48px 0 24px 0; font-family: 'Playfair Display', serif; }
+    nav { background: #fff; box-shadow: 0 2px 12px rgba(106,17,203,0.07); padding: 12px 0; text-align: center; border-bottom: 2px solid #e0e7ff; }
+    nav a { color: #2575fc; margin: 0 18px; text-decoration: none; font-weight: bold; font-size: 1.08em; padding: 8px 18px; border-radius: 20px; transition: background 0.2s, color 0.2s; display: inline-block; }
+    nav a:hover, nav a:focus { background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%); color: #fff; }
+    main { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 18px; box-shadow: 0 4px 32px rgba(106,17,203,0.07); padding: 40px 28px; }
+    h2 { font-family: 'Playfair Display', serif; color: #6a11cb; font-size: 2.2em; margin-top: 0; }
+    form { margin-top: 30px; }
+    .form-section { margin-bottom: 40px; background: linear-gradient(120deg, #e0e7ff 0%, #f9f6ff 100%); border-radius: 14px; box-shadow: 0 4px 24px rgba(37,117,252,0.10); padding: 32px 22px 20px 22px; border-left: 5px solid #6a11cb; }
+    label { display: block; margin-bottom: 8px; font-weight: bold; }
+    input[type="text"], input[type="number"] { width: 100%; padding: 8px; margin-bottom: 18px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; }
+    button { background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%); color: #fff; border: none; padding: 12px 30px; border-radius: 20px; font-size: 1em; cursor: pointer; font-family: 'Open Sans', sans-serif; font-weight: bold; letter-spacing: 1px; transition: background 0.2s, box-shadow 0.2s; box-shadow: 0 2px 12px rgba(106,17,203,0.07); }
+    button:hover { background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%); box-shadow: 0 8px 32px rgba(106,17,203,0.18); }
+    footer { background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%); color: #fff; text-align: center; padding: 24px 0 20px 0; font-size: 1.1em; letter-spacing: 1px; margin-top: 60px; border-top-left-radius: 18px; border-top-right-radius: 18px; box-shadow: 0 -2px 12px rgba(106,17,203,0.07); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Measurement Form</h1>
+    <p>For Suits and Dresses</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="measurements.html">Measurements</a>
+    <a href="#">Contact</a>
+  </nav>
+  <main>
+    <h2>Suit Measurements</h2>
+    <form class="form-section">
+      <label for="suit-name">Full Name</label>
+      <input type="text" id="suit-name" name="suit-name" required>
+      <label for="suit-chest">Chest (cm)</label>
+      <input type="number" id="suit-chest" name="suit-chest" required>
+      <label for="suit-waist">Waist (cm)</label>
+      <input type="number" id="suit-waist" name="suit-waist" required>
+      <label for="suit-hips">Hips (cm)</label>
+      <input type="number" id="suit-hips" name="suit-hips">
+      <label for="suit-sleeve">Sleeve Length (cm)</label>
+      <input type="number" id="suit-sleeve" name="suit-sleeve">
+      <label for="suit-shoulder">Shoulder Width (cm)</label>
+      <input type="number" id="suit-shoulder" name="suit-shoulder">
+      <label for="suit-jacket">Jacket Length (cm)</label>
+      <input type="number" id="suit-jacket" name="suit-jacket">
+      <label for="suit-trouser">Trouser Outseam (cm)</label>
+      <input type="number" id="suit-trouser" name="suit-trouser">
+      <button type="submit">Submit Suit Measurements</button>
+    </form>
+    <h2>Dress Measurements</h2>
+    <form class="form-section">
+      <label for="dress-name">Full Name</label>
+      <input type="text" id="dress-name" name="dress-name" required>
+      <label for="dress-bust">Bust (cm)</label>
+      <input type="number" id="dress-bust" name="dress-bust" required>
+      <label for="dress-waist">Waist (cm)</label>
+      <input type="number" id="dress-waist" name="dress-waist" required>
+      <label for="dress-hips">Hips (cm)</label>
+      <input type="number" id="dress-hips" name="dress-hips">
+      <label for="dress-length">Dress Length (cm)</label>
+      <input type="number" id="dress-length" name="dress-length">
+      <label for="dress-shoulder">Shoulder Width (cm)</label>
+      <input type="number" id="dress-shoulder" name="dress-shoulder">
+      <label for="dress-sleeve">Sleeve Length (cm)</label>
+      <input type="number" id="dress-sleeve" name="dress-sleeve">
+      <button type="submit">Submit Dress Measurements</button>
+    </form>
+  </main>
+  <footer>
+    &copy; 2025 Sir James Clothing | Polokwane, South Africa
+  </footer>
+</body>
+</html>

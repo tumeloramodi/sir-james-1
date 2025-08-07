@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sir James clothing – Polokwane</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(135deg, #f9f6ff 0%, #e0e7ff 100%);
+      color: #222;
+      min-height: 100vh;
+    }
+    header {
+      position: relative;
+      background: linear-gradient(120deg, #6a11cb 0%, #2575fc 100%);
+      height: 320px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .header-content::before {
+      content: '';
+      display: block;
+      background: url('image/sir-james-logo.png.JPG') center/contain no-repeat;
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 18px auto;
+      border-radius: 50%;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+    }
+    .header-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(34,34,34,0.5);
+      z-index: 1;
+    }
+    .header-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      padding-top: 30px;
+    }
+    .header-content p {
+      margin: 10px 0 0 0;
+      font-size: 1.3em;
+      text-shadow: 1px 1px 4px #000;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(106,17,203,0.07);
+      padding: 12px 0 12px 0;
+      text-align: center;
+      border-bottom: 2px solid #e0e7ff;
+    }
+    nav a {
+      color: #2575fc;
+      margin: 0 18px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.08em;
+      padding: 8px 18px;
+      border-radius: 20px;
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    nav a:hover, nav a:focus {
+      background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+      color: #fff;
+    }
+    section {
+      padding: 48px 20px 40px 20px;
+      max-width: 950px;
+      margin: 40px auto 0 auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 32px rgba(106,17,203,0.07);
+    }
+    .story-block {
+      background: linear-gradient(120deg, #e0e7ff 0%, #f9f6ff 100%);
+      border-left: 6px solid #6a11cb;
+      margin-top: 40px;
+      padding: 32px 28px;
+      box-shadow: 0 4px 24px rgba(37,117,252,0.08);
+      border-radius: 12px;
+    }
+    .story-block h3 {
+      margin-top: 0;
+      color: #6a11cb;
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      letter-spacing: 1px;
+    }
+    footer {
+      background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+      color: #fff;
+      text-align: center;
+      padding: 24px 0 20px 0;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+      margin-top: 60px;
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+      box-shadow: 0 -2px 12px rgba(106,17,203,0.07);
+    }
+    .photo-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      justify-content: center;
+      margin-top: 32px;
+    }
+    .photo-box {
+      background: linear-gradient(120deg, #e0e7ff 0%, #f9f6ff 100%);
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(37,117,252,0.10);
+      padding: 18px 18px 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 220px;
+      max-width: 320px;
+      flex: 1 1 260px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .photo-box:hover {
+      box-shadow: 0 8px 32px rgba(106,17,203,0.18);
+      transform: translateY(-6px) scale(1.03);
+    }
+    .story-photo {
+      display: block;
+      max-width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 4px solid #6a11cb;
+      background: #fff;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(37,117,252,0.13);
+    }
+    .story-photo:hover {
+      transform: scale(1.04) rotate(-1deg);
+      box-shadow: 0 16px 48px rgba(106,17,203,0.18);
+    }
+    .love-frame {
+      position: relative;
+      border: 4px solid #ff4f81;
+      box-shadow: 0 8px 32px rgba(255,79,129,0.13), 0 4px 24px rgba(37,117,252,0.10);
+      background: linear-gradient(120deg, #ffe0ec 0%, #f9f6ff 100%);
+    }
+    .love-icon {
+      position: absolute;
+      top: 12px;
+      right: 18px;
+      font-size: 2.1em;
+      color: #ff4f81;
+      z-index: 2;
+      filter: drop-shadow(0 2px 4px rgba(255,79,129,0.18));
+      pointer-events: none;
+    }
+    .video-block {
+      margin: 48px auto 0 auto;
+      text-align: center;
+    }
+    .home-video {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(37,117,252,0.13);
+      border: 4px solid #6a11cb;
+      background: #fff;
+      margin-bottom: 12px;
+    }
+    .video-caption {
+      color: #2575fc;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.08em;
+      margin-top: 8px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-overlay"></div>
+    <div class="header-content">
+
+      <p>Polokwane, South Africa</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="measurements.html">Measurements</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section>
+    <h2>Welcome to Sir James clothing</h2>
+    <p>Located in the heart of Polokwane, Sir James clothing offers bespoke suit tailoring for weddings, business, and everyday elegance. With years of craftsmanship and a passion for detail, every suit is made to measure and built to impress.</p>
+    <p>Explore our services, book a fitting, or submit your measurements online. We’re here to make you look your sharpest.</p>
+    <div class="story-block">
+      <h3>Our Story</h3>
+      <p>
+        The Sir James clothing logo, proudly displayed above, is more than just an image—it’s a symbol of tradition, pride, and the pursuit of excellence. Inspired by the classic elegance of tailored suits, our journey began with a single vision: to bring world-class tailoring to Polokwane. Every stitch, every fabric, and every detail in our shop reflects the values of quality and personal service that Sir James stands for.<br><br>
+        The logo represents our founder’s commitment to timeless style and the belief that every client deserves to look and feel their best. From humble beginnings, Sir James has grown into a trusted name for weddings, business attire, and special occasions, always guided by the same passion for craftsmanship that inspired our story.
+      </p>
+      <img src="image/487311903_3025334197634088_2749099759321751910_n.jpg" alt="Sir James Story Photo" class="story-photo">
+      <div class="photo-gallery">
+        <div class="photo-box love-frame">
+          <span class="love-icon">&#10084;&#65039;</span>
+          <img src="image/487311903_3025334197634088_2749099759321751910_n.jpg" alt="Sir James Story Photo 1" class="story-photo">
+        </div>
+        <div class="photo-box">
+          <img src="image/487311764_3025334294300745_4889515149513080357_n.jpg" alt="Sir James Story Photo 2" class="story-photo">
+        </div>
+        <div class="photo-box love-frame">
+          <span class="love-icon">&#10084;&#65039;</span>
+          <img src="image/487857786_3025334094300765_7958686633779427684_n.jpg" alt="Sir James Story Photo 3" class="story-photo">
+        </div>
+      </div>
+      <div class="video-block">
+        <video controls poster="image/sir-james-logo.png.JPG" class="home-video">
+          <source src="video/sir james.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-caption">Sir James Dressing Custom – See our craftsmanship in action!</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Sir James clothing | Polokwane, South Africa
+  </footer>
+
+</body>
+</html>
+
